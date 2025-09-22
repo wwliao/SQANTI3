@@ -157,9 +157,9 @@ def run_candidate_mapping(ref_trans_fasta,targets_list,candidates_list,
     seen = set()
     deduped_targets = []
     for record in ref_targets + LR_targets:
-	if record.id not in seen:
-	    deduped_targets.append(record)
-	    seen.add(record.id)
+        if record.id not in seen:
+            deduped_targets.append(record)
+            seen.add(record.id)
     save_fasta(deduped_targets, targets_fasta)
 
     ## Filter SQ3 FASTA to include rescue candidates
